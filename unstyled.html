@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supa Menu! | Classic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Public+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./demo-styles.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./dist/supamenu-unstyled.css"
+    />
+  </head>
+  <body>
+    <nav id="menu-2" class="supamenu">
+      <button
+        type="button"
+        class="spm__close-menu-button"
+        aria-label="close menu"
+      >
+        <span class="spm-icon spm-icon--cross"></span>
+      </button>
+
+      <div class="spm-container spm-inner-container">
+        <div class="spm-component">
+          <div class="spm-logo">supamenu</div>
+        </div>
+        <div class="spm__block">
+          <p class="spm__block__title">
+            Variants
+            <button type="button" class="spm__toggle-button">
+              <span class="visuallyhidden">Show submenu for "Block 1"</span>
+              <span class="spm-icon spm-icon--triangle" aria-hidden></span>
+            </button>
+          </p>
+          <div class="spm__block__content">
+            <ul class="spm__list">
+              <li class="spm__list__item">
+                <a href="/modal.html">modal menu</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/off-canvas.html">off canvas menu</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/unstyled.html">unstyled menu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spm__block">
+          <p class="spm__block__title">
+            <a href="">About</a>
+            <button type="button" class="spm__toggle-button">
+              <span class="visuallyhidden">Show submenu for "About"</span>
+              <span class="spm-icon spm-icon--triangle" aria-hidden></span>
+            </button>
+          </p>
+          <div class="spm__block__content">
+            <ul class="spm__list">
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem, ipsum dolor.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+              </li>
+              <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
+              <li class="spm__list__item">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing.</a
+                >
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem, ipsum dolor.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+              </li>
+              <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
+              <li class="spm__list__item">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing.</a
+                >
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem, ipsum dolor.</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+              </li>
+              <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
+              <li class="spm__list__item">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing.</a
+                >
+              </li>
+              <li class="spm__list__item">
+                <a href="">Lorem ipsum dolor sit.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spm-component">
+          <div class="spm-search">
+            <span
+              class="spm-icon spm-icon--m-glass spm-search__icon"
+              aria-hidden
+            ></span>
+            <input type="search" aria-label="search" placeholder="Search.." />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="page-header">
+        <h1>supamenu</h1>
+      </header>
+      <nav id="main-navigation">
+        <a href="/index.html">Classic menu</a>
+        <a href="/off-canvas.html">Off-canvas</a>
+        <a href="/modal.html">Modal menu</a>
+      </nav>
+      <section class="page-content">
+        <button aria-haspopup="menu" type="button" id="menu-2-trigger">
+          show menu
+        </button>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+          corporis! Officia sed accusantium at officiis reiciendis minus quidem
+          eaque enim? Dolor culpa iste delectus cumque neque deserunt, voluptate
+          voluptates officia.
+        </p>
+
+        <hr />
+        <h2>Classic menu</h2>
+        <p>Positioning:</p>
+        <form class="class-selector">
+          <label>
+            <input type="radio" value="default" name="menu-classes" />
+            Default
+          </label>
+          <label>
+            <input type="radio" value="supamenu--fixed" name="menu-classes" />
+            Fixed
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--sticky"
+              name="menu-classes"
+              checked
+            />
+            Sticky
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--fixed--bottom"
+              name="menu-classes"
+            />
+            Fixed bottom
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--sticky--bottom"
+              name="menu-classes"
+            />
+            Sticky bottom
+          </label>
+        </form>
+        <br />
+        <br />
+
+        <p>Styles:</p>
+        <form class="class-selector">
+          <label>
+            <input type="radio" value="default" name="menu-classes" checked />
+            Default
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              value="supamenu--align-left"
+              name="menu-classes"
+            />
+            Align left
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--align-right"
+              name="menu-classes"
+            />
+            Align right
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              value="supamenu--full-width"
+              name="menu-classes"
+            />
+            Full width
+          </label>
+        </form>
+
+        <p>Mode:</p>
+        <form class="class-selector">
+          <label>
+            <input type="radio" value="default" name="menu-classes" />
+            Default
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--darkmode"
+              name="menu-classes"
+            />
+            Dark mode
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="supamenu--lightmode"
+              name="menu-classes"
+            />
+            Light mode
+          </label>
+        </form>
+
+        <p>Colors:</p>
+        <div>
+          <input
+            type="color"
+            id="accent-color"
+            name="accent-color"
+            value="#2457f2"
+          />
+          <label for="accent-color">Accent color</label>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script type="module" async src="./index.js"></script>
+</html>

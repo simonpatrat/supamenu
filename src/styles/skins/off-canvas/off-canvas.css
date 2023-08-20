@@ -1,0 +1,28 @@
+.supamenu--off-canvas {
+  @add-mixin off-canvas {
+    .spm-component {
+      + * {
+        margin-top: 16px;
+      }
+    }
+
+    &.supamenu--darkmode,
+    &.supamenu--darkmode:not(.supamenu--lightmode),
+    &[data-theme="dark"] {
+      background: var(--supamenu-darkmode-off-canvas-background) !important;
+
+      .spm__block__content {
+        background: var(--supamenu-darkmode-off-canvas-background);
+      }
+    }
+  }
+}
+
+#supamenu-page {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+
+  &.supamenu--menu-visible {
+    transform: translateX(var(--supamenu-menu-width));
+  }
+}

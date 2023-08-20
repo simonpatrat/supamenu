@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--dot-color-bg-lighter);
+  color: var(--dot-color-text-dark);
+  font-family: "Public Sans", sans-serif, "Franklin Gothic Medium",
+    "Arial Narrow", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.page-header {
+  max-width: var(--supamenu-max-content-width);
+  width: calc(100vw - 32px);
+  border-radius: 30px;
+  background: linear-gradient(
+    137deg,
+    #6c3ec5 0%,
+    #9c59e3 20%,
+    var(--supamenu-accent-color) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 32px auto;
+  height: 400px;
+  max-height: 40vw;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.spm-logo {
+  font-family: "Caprasimo", cursive;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--supamenu-accent-color);
+  background: -webkit-linear-gradient(
+    37deg,
+    color-mix(in srgb, var(--supamenu-accent-color) 40%, black) 0%,
+    var(--supamenu-accent-color) 40%,
+    #6c3ec5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.darkmode .spm-logo {
+  background: -webkit-linear-gradient(
+    37deg,
+    color-mix(in srgb, var(--supamenu-accent-color) 40%, white) 0%,
+    var(--supamenu-accent-color) 40%,
+    #6c3ec5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4.5rem);
+  font-family: "Caprasimo", cursive;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.page-content {
+  min-height: 300vh;
+  max-width: 800px;
+  width: 95%;
+  margin: auto;
+}
+
+#main-navigation {
+  display: flex;
+  background: transparent;
+  margin: 16px auto;
+  max-width: 800px;
+  width: 95%;
+  margin: 32px auto;
+}
+
+a {
+  display: block;
+  padding: 16px;
+  color: rgb(50, 69, 240);
+}
+
+/* Do not invert media (revert the invert). */
+body.darkmode img,
+body.darkmode video,
+body.darkmode iframe {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Improve contrast on icons. */
+body.darkmode .icon {
+  filter: invert(15%) hue-rotate(180deg);
+}
+
+/* Re-enable code block backgrounds. */
+body.darkmode pre {
+  filter: invert(6%);
+}
+
+/* Improve contrast on list item markers. */
+body.darkmode li::marker {
+  color: var(--dot-color-text-light);
+}

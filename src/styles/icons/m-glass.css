@@ -1,0 +1,29 @@
+.spm-icon {
+  &.spm-icon--m-glass {
+    box-sizing: content-box;
+    position: relative;
+    border-radius: 30px;
+    height: 9px;
+    width: 9px;
+    border: 2px solid var(--supamenu-icon-color);
+
+    &:after {
+      content: "";
+      height: 2px;
+      width: 9px;
+      background: var(--supamenu-icon-color);
+      position: absolute;
+      top: 11px;
+      left: 7px;
+      transform: rotate(45deg);
+    }
+
+    .supamenu--darkmode & {
+      border: 2px solid var(--supamenu-darkmode-icon-color);
+
+      &:after {
+        background: var(--supamenu-darkmode-icon-color);
+      }
+    }
+  }
+}

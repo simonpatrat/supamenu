@@ -1,0 +1,14 @@
+.spm-icon {
+  &.spm-icon--triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 4px 0 4px;
+    border-color: var(--supamenu-icon-color) transparent transparent transparent;
+
+    .supamenu--darkmode & {
+      border-color: var(--supamenu-darkmode-icon-color) transparent transparent
+        transparent;
+    }
+  }
+}
