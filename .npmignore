@@ -1,4 +1,5 @@
+src
 node_modules/
-dist/
+tests/
 bundle-analysis.html
 .npmrc
