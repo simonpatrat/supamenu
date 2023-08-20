@@ -1,19 +1,25 @@
 {
-  "name": "supamenu",
-  "version": "0.0.1",
+  "name": "@simonpatrat/supamenu",
+  "version": "0.0.3",
   "description": "Supa menu",
   "author": "Simon Patrat",
+  "repository": "https://github.com/simonpatrat/supamenu.git",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "dev": "NODE_ENV=development rollup -c --watch",
     "reload": "livereload 'build/'",
     "watch": "npm-run-all --parallel reload dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-and-publish": "yarn build && npm publish",
+    "bp": "yarn build-and-publish"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^5.0.1",
