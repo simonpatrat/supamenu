@@ -33,10 +33,10 @@ export class SupaMenu {
   instanceId: number;
   togglers: Toggler[] = [];
   currentTrappedFocus: { onClose: () => void } | undefined;
-  constructor(element: HTMLElement, options: SupaMenuSettings) {
+  constructor(element: HTMLElement, options?: SupaMenuSettings) {
     this.settings = {
       ...this.defaults,
-      ...options,
+      ...(options || {}),
     };
 
     if (!element) {
