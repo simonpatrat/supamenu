@@ -1,6 +1,6 @@
 {
   "name": "@simonpatrat/supamenu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Supa menu",
   "author": "Simon Patrat",
   "repository": "https://github.com/simonpatrat/supamenu.git",
@@ -9,6 +9,9 @@
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -55,8 +58,5 @@
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   },
-  "dependencies": {
-    "nanoid": "^4.0.2",
-    "normalize.css": "^8.0.1"
-  }
+  "dependencies": {}
 }
