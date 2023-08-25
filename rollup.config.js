@@ -1,6 +1,9 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import { babel } from "@rollup/plugin-babel";
+// import inject from "@rollup/plugin-inject";
 
 import rfs from "rfs";
 import postcss from "rollup-plugin-postcss";
@@ -61,39 +64,59 @@ const getPostCss = () => [
   }),
 ];
 
-export default {
-  input: ["./src/index.ts"],
-  output: [
-    {
-      dir: "dist",
-      format: "esm",
-      // preserveModules: true,
-      // preserveModulesRoot: "src",
-      sourcemap: true,
-    },
-    // {
-    //   file: "dist/supamenu.min.js",
-    //   format: "esm",
-    //   plugins: [terser()],
+const getPlugins = () => [
+  // inject({
+  //   react: ["react", "React"],
+  //   ReactDOM: ["react-dom", "ReactDOM"],
+  // }),
+  peerDepsExternal({
+    includeDependencies: true,
+  }),
+  commonjs({
+    include: /node_modules/,
+  }),
+  resolve(),
+
+  typescript({
+    tsconfig: "./tsconfig.json",
+    declaration: true,
+    declarationDir: "dist",
+    exclude: ["**/*.spec.ts", "**/*.stories.*"],
+  }),
+  babel({ babelHelpers: "bundled" }),
+
+  isProduction && terser(),
+  // visualizer({
+  //   filename: "bundle-analysis.html",
+  //   open: true,
+  // }),
+];
+
+export default [
+  {
+    input: ["./src/index.ts", "./src/supamenu-react/index.ts"],
+    output: [
+      {
+        dir: "dist",
+        format: "esm",
+        preserveModules: true,
+        preserveModulesRoot: "src",
+        sourcemap: !isProduction,
+        paths: {
+          "react/jsx-runtime": "react/jsx-runtime.js",
+        },
+      },
+      // {
+      //   file: "dist/supamenu.min.js",
+      //   format: "esm",
+      //   plugins: [terser()],
+      // },
+    ],
+    plugins: [...getPlugins(), ...getPostCss()].filter(Boolean),
+    external: ["react", "react-dom", "react/jsx-runtime"],
+    // globals: {
+    //   react: "React",
+    //   "react-dom": "ReactDOM",
     // },
-  ],
-  plugins: [
-    commonjs(),
-    resolve(),
-
-    typescript({
-      tsconfig: "./tsconfig.json",
-      declaration: true,
-      declarationDir: "dist",
-    }),
-
-    isProduction && terser(),
-    // visualizer({
-    //   filename: "bundle-analysis.html",
-    //   open: true,
-    // }),
-
-    ...getPostCss(),
-  ].filter(Boolean),
-  // external: [],
-};
+  },
+];
