@@ -5,8 +5,8 @@
   "author": "Simon Patrat",
   "repository": "https://github.com/simonpatrat/supamenu.git",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
   "files": [

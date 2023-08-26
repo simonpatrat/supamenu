@@ -16,10 +16,9 @@ import postcssEach from "postcss-each";
 
 import postcssDiscardDuplicates from "postcss-discard-duplicates";
 
-import path from "path";
-
 import { visualizer } from "rollup-plugin-visualizer";
 import terser from "@rollup/plugin-terser";
+import packageJson from "./package.json" assert { type: "json" };
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -37,38 +36,43 @@ const getPostCssPlugins = () => [
   postcssDiscardDuplicates(),
 ];
 
-const getPostCss = () => [
-  postcss({
-    parser: "postcss-scss",
-    // modules: true,
+const getPostCss = () => {
+  return [
+    postcss({
+      parser: "postcss-scss",
+      // modules: true,
 
-    include: "src/styles/main.css",
-    extract: path.resolve("dist/supamenu.css"),
-    minimize: isProduction ? true : false,
-    sourcemap: isProduction ? false : true,
-    plugins: [...getPostCssPlugins()],
-  }),
-  postcss({
-    parser: "postcss-scss",
-    // modules: true,
+      include: "src/styles/main.css",
+      extract: "dist/supamenu.css",
+      minimize: isProduction ? true : false,
+      sourcemap: isProduction ? false : true,
+      plugins: [...getPostCssPlugins()],
+    }),
+    postcss({
+      parser: "postcss-scss",
+      // modules: true,
 
-    include: "src/styles/skins/unstyled/unstyled.css",
+      include: "src/styles/skins/unstyled/unstyled.css",
 
-    extract: path.resolve("dist/supamenu-unstyled.css"),
-    minimize: isProduction ? true : false,
-    sourcemap: isProduction ? false : true,
-    plugins: [...getPostCssPlugins()],
-  }),
-];
+      extract: "dist/supamenu-unstyled.css",
+      minimize: isProduction ? true : false,
+      sourcemap: isProduction ? false : true,
+      plugins: [...getPostCssPlugins()],
+    }),
+  ];
+};
 
 export default {
   input: ["./src/index.ts"],
   output: [
     {
-      dir: "dist",
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true,
+    },
+    {
+      file: packageJson.module,
       format: "esm",
-      // preserveModules: true,
-      // preserveModulesRoot: "src",
       sourcemap: true,
     },
     // {
