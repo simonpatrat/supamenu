@@ -16,11 +16,17 @@ import postcssEach from "postcss-each";
 
 import postcssDiscardDuplicates from "postcss-discard-duplicates";
 
+import path from "path";
+
 import { visualizer } from "rollup-plugin-visualizer";
 import terser from "@rollup/plugin-terser";
 import packageJson from "./package.json" assert { type: "json" };
 
 const isProduction = process.env.NODE_ENV === "production";
+
+const absolute = path.resolve("dist/css");
+
+console.log({ absolute });
 
 const getPostCssPlugins = () => [
   atImport(),
@@ -43,7 +49,7 @@ const getPostCss = () => {
       // modules: true,
 
       include: "src/styles/main.css",
-      extract: "dist/supamenu.css",
+      extract: absolute + "/supamenu.css",
       minimize: isProduction ? true : false,
       sourcemap: isProduction ? false : true,
       plugins: [...getPostCssPlugins()],
@@ -54,7 +60,7 @@ const getPostCss = () => {
 
       include: "src/styles/skins/unstyled/unstyled.css",
 
-      extract: "dist/supamenu-unstyled.css",
+      extract: absolute + "/supamenu-unstyled.css",
       minimize: isProduction ? true : false,
       sourcemap: isProduction ? false : true,
       plugins: [...getPostCssPlugins()],
@@ -66,12 +72,14 @@ export default {
   input: ["./src/index.ts"],
   output: [
     {
-      file: packageJson.main,
+      dir: "dist",
+      entryFileNames: "cjs/index.js",
       format: "cjs",
       sourcemap: true,
     },
     {
-      file: packageJson.module,
+      dir: "dist",
+      entryFileNames: "esm/index.js",
       format: "esm",
       sourcemap: true,
     },
@@ -88,7 +96,7 @@ export default {
     typescript({
       tsconfig: "./tsconfig.json",
       declaration: true,
-      declarationDir: "dist",
+      declarationDir: "dist/types",
     }),
 
     isProduction && terser(),

@@ -1,4 +1,4 @@
-import { SupaMenu } from "../dist/index.js";
+import { SupaMenu } from "../dist/esm/index.js";
 
 const menuTrigger1 = document.querySelector("#menu-1-trigger");
 const menuElement1 = document.querySelector("#menu-1");
