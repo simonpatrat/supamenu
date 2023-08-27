@@ -7,8 +7,9 @@
     }
 
     &.supamenu--darkmode,
+    &[data-theme="dark"],
     &.supamenu--darkmode:not(.supamenu--lightmode),
-    &[data-theme="dark"] {
+    &[data-theme="dark"]:not(.supamenu--lightmode) {
       background: var(--supamenu-darkmode-off-canvas-background) !important;
 
       .spm__block__content {

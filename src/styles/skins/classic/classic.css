@@ -212,7 +212,8 @@
       }
     }
 
-    &.supamenu--darkmode {
+    &.supamenu--darkmode,
+    &[data-theme="dark"] {
       .spm-inner-container {
         .spm__block__content {
           background: var(--supamenu-darkmode-classic-menu-dropdown-background);

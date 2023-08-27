@@ -17,7 +17,8 @@
       background: var(--supamenu-icon-color);
     }
 
-    .supamenu--darkmode & {
+    .supamenu--darkmode &,
+    [data-theme="dark"] & {
       background: var(--supamenu-darkmode-icon-color);
 
       &:before {

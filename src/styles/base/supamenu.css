@@ -32,7 +32,8 @@
     }
   }
 
-  &.supamenu--darkmode {
+  &.supamenu--darkmode,
+  &[data-theme="dark"] {
     a {
       &:hover {
         color: var(--supamenu-darkmode-link-color-hover);
@@ -212,7 +213,8 @@
     margin: 0 8px 0 16px;
   }
 
-  &.supamenu--darkmode {
+  &.supamenu--darkmode,
+  &[data-theme="dark"] {
     .spm-search {
       input {
         color: var(--supamenu-text-color);
@@ -249,7 +251,8 @@
     cursor: pointer;
   }
 
-  &.supamenu--darkmode {
+  &.supamenu--darkmode,
+  &[data-theme="dark"] {
     &:not(.supamenu--lightmode) {
       @add-mixin darkmode {
         .spm-search {

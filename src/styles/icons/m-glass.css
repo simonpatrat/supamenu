@@ -18,7 +18,8 @@
       transform: rotate(45deg);
     }
 
-    .supamenu--darkmode & {
+    .supamenu--darkmode &,
+    [data-theme="dark"] & {
       border: 2px solid var(--supamenu-darkmode-icon-color);
 
       &:after {

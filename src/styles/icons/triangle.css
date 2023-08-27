@@ -6,7 +6,8 @@
     border-width: 6px 4px 0 4px;
     border-color: var(--supamenu-icon-color) transparent transparent transparent;
 
-    .supamenu--darkmode & {
+    .supamenu--darkmode &,
+    [data-theme="dark"] & {
       border-color: var(--supamenu-darkmode-icon-color) transparent transparent
         transparent;
     }
