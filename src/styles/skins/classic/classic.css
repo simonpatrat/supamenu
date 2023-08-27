@@ -146,6 +146,34 @@
               align-items: center;
               width: 100%;
             }
+
+            > .spm__block {
+              position: relative;
+              width: 100%;
+              color: inherit;
+
+              > .spm__block__title {
+                color: inherit;
+                padding-left: 16px;
+              }
+
+              > .spm__block__content {
+                max-width: 100%;
+                display: none;
+                left: 0;
+                top: 100%;
+                position: relative;
+                transform: translateY(0);
+              }
+
+              &.spm__block--visible {
+                > .spm__block__content {
+                  display: block !important;
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
           }
         }
 
@@ -281,6 +309,14 @@
 
       .spm__block__content {
         padding: 0 8px;
+
+        .spm__list__item {
+          > .spm__block {
+            > .spm__block__title {
+              width: 100%;
+            }
+          }
+        }
       }
 
       .spm__close-menu-button {

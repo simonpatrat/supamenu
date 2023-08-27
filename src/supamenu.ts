@@ -3,6 +3,7 @@ import "./styles/skins/unstyled/unstyled.css";
 import { CLASSNAMES, CLOSE_MENU_SELECTOR, ERRORS } from "./lib/constants";
 import { Toggler } from "./lib/Toggler";
 import { trapFocus } from "./lib/utils/focusTrap";
+import { areSiblings } from "./lib/utils/DOMUtils";
 
 export interface SupaMenuSettings {
   fullWidth?: boolean;
@@ -152,13 +153,22 @@ export class SupaMenu {
             const ariaControls =
               blockToggleButton.getAttribute("aria-controls");
 
-            // hide other blocks
+            // Hide other siblings blocks
             this.togglers.forEach((toggler) => {
               const togglerAriaControls = toggler.element
                 .querySelector(".spm__toggle-button")
                 ?.getAttribute("aria-controls");
 
-              if (toggler.isVisible && togglerAriaControls !== ariaControls) {
+              const isTogglerElementSibling = areSiblings(
+                block,
+                toggler.element
+              );
+
+              if (
+                toggler.isVisible &&
+                togglerAriaControls !== ariaControls &&
+                isTogglerElementSibling
+              ) {
                 toggler.hide();
                 toggler.element
                   .querySelector(".spm__toggle-button")
