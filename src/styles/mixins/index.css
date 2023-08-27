@@ -62,15 +62,6 @@
 
 @define-mixin darkmode {
   --supamenu-scrollbar-color: rgba(255, 255, 255, 0.5);
-  img,
-  video,
-  iframe {
-    filter: invert(100%) hue-rotate(180deg);
-  }
-
-  .icon {
-    filter: invert(15%) hue-rotate(180deg);
-  }
 
   pre {
     filter: invert(6%);
