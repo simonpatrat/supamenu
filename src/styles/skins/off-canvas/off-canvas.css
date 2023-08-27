@@ -18,11 +18,11 @@
   }
 }
 
-#supamenu-page {
+.supamenu-page {
   transform: translateX(0);
   transition: transform 300ms ease-in-out;
 
-  &.supamenu--menu-visible {
+  &.supamenu-page--menu-visible {
     transform: translateX(var(--supamenu-menu-width));
   }
 }
