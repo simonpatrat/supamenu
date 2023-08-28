@@ -6,11 +6,12 @@ import { trapFocus } from "./lib/utils/focusTrap";
 import { areSiblings } from "./lib/utils/DOMUtils";
 
 export interface SupaMenuSettings {
-  fullWidth?: boolean;
   namespace?: string;
   additionalClassName?: string;
   defaultVisible?: boolean;
   autoDetectColorScheme?: boolean;
+  onShow?: () => void;
+  onHide?: () => void;
 }
 
 let supamenuInstances = 0;
@@ -53,7 +54,6 @@ export class SupaMenu {
     return this.instanceId;
   };
 
-  // TODO: is this necessary ?
   createEvents = () => {
     if (!this?.HTMLElement) {
       return;
@@ -86,8 +86,11 @@ export class SupaMenu {
 
     this.currentTrappedFocus = trapFocus(this.getElement() as HTMLElement);
 
-    // finally dispatch event
     this.HTMLElement?.dispatchEvent(this.events.show);
+
+    if (typeof this.settings?.onShow === "function") {
+      this.settings.onShow();
+    }
   };
 
   handleHide = () => {
@@ -102,8 +105,11 @@ export class SupaMenu {
       this.currentTrappedFocus?.onClose();
     }
 
-    // finally dispatch event
     this.HTMLElement?.dispatchEvent(this.events.hide);
+
+    if (typeof this.settings?.onHide === "function") {
+      this.settings.onHide();
+    }
   };
 
   show = () => {

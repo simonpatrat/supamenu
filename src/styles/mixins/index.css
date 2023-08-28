@@ -99,6 +99,27 @@
       opacity: 0;
     }
 
+    .spm__close-menu-button {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .spm__block__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > .spm__toggle-button {
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+      }
+    }
+
+    .spm-container {
+      display: block;
+    }
+
     &.supamenu--visible {
       transform: translateX(0);
       transition: transform 300ms ease-in-out, opacity 300ms ease 300ms;
