@@ -26,9 +26,7 @@
     "watch": "npm-run-all --parallel reload dev",
     "test": "jest",
     "test:coverage": "jest  --coverage",
-    "build-and-publish": "yarn build && npm publish",
-    "bp": "yarn build-and-publish",
-    "publish-np": "yarn build && np"
+    "pub": "yarn build && np"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
