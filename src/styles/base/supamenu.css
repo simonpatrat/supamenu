@@ -6,6 +6,7 @@
   font-family: var(--supamenu-font-family);
   letter-spacing: 1px;
   font-size: var(--supamenu-font-size);
+  line-height: 1.5;
 
   @add-mixin scrollbar-styles;
 

@@ -145,9 +145,29 @@ export class SupaMenu {
     this.blocks = this.getBlocks();
   };
 
+  onHideSubmenu = (togglerElement?: HTMLElement) => {
+    if (togglerElement) {
+      togglerElement
+        .querySelector(".spm__toggle-button")
+        ?.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  onShowSubmenu = (togglerElement?: HTMLElement) => {
+    if (togglerElement) {
+      togglerElement
+        .querySelector(".spm__toggle-button")
+        ?.setAttribute("aria-expanded", "true");
+    }
+  };
+
   configureBlocks = () => {
     this.blocks.forEach((block) => {
-      const b = new Toggler(block, { visibleClassName: "spm__block--visible" });
+      const b = new Toggler(block, {
+        visibleClassName: "spm__block--visible",
+        onHide: this.onHideSubmenu,
+        onShow: this.onShowSubmenu,
+      });
       this.togglers.push(b);
       const blockToggleButton = block.querySelector(".spm__toggle-button");
 
@@ -176,16 +196,12 @@ export class SupaMenu {
                 isTogglerElementSibling
               ) {
                 toggler.hide();
-                toggler.element
-                  .querySelector(".spm__toggle-button")
-                  ?.setAttribute("aria-expanded", "false");
               }
             });
           }
 
           // Toggle the wished block
           b.toggle();
-          blockToggleButton?.setAttribute("aria-expanded", `${b.isVisible}`);
         });
       }
     });
@@ -262,6 +278,18 @@ export class SupaMenu {
     }
   };
 
+  handleClickOnMenuBlock = (event: MouseEvent) => {
+    event.stopPropagation();
+  };
+
+  handleClickOnBody = () => {
+    if (!this.getElement()?.classList.contains("supamenu--off-canvas")) {
+      this.togglers.forEach((t) => {
+        if (t.isVisible) t.hide();
+      });
+    }
+  };
+
   setColorTheme = (theme: "dark" | "light") => {
     this.HTMLElement?.setAttribute("data-theme", theme);
 
@@ -308,6 +336,13 @@ export class SupaMenu {
     if (this.settings.autoDetectColorScheme) {
       this.addListenerForColorScheme();
     }
+    const togglerBlocks = this.togglers.map((t) => t.element);
+    if (togglerBlocks?.length > 0) {
+      togglerBlocks.forEach((block) => {
+        block.addEventListener("click", this.handleClickOnMenuBlock);
+      });
+    }
+    document.body.addEventListener("click", this.handleClickOnBody);
   };
 
   removeListeners = () => {
@@ -324,6 +359,13 @@ export class SupaMenu {
 
     if (this.settings.autoDetectColorScheme) {
       this.removeListenerForColorScheme();
+    }
+
+    const togglerBlocks = this.togglers.map((t) => t.element);
+    if (togglerBlocks?.length > 0) {
+      togglerBlocks.forEach((block) => {
+        block.removeEventListener("click", this.handleClickOnMenuBlock);
+      });
     }
   };
 

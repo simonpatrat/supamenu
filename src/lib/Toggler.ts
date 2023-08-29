@@ -1,7 +1,7 @@
 export interface TogglerSettings {
   visibleClassName: string;
-  onShow?: () => void;
-  onHide?: () => void;
+  onShow?: (element?: HTMLElement) => void;
+  onHide?: (element?: HTMLElement) => void;
 }
 
 const togglerDefaults = {
@@ -34,7 +34,7 @@ export class Toggler {
 
     this.isVisible = true;
     if (typeof onShow === "function") {
-      onShow();
+      onShow(this.element);
     }
 
     return this.getState();
@@ -47,7 +47,7 @@ export class Toggler {
 
     this.isVisible = false;
     if (typeof onHide === "function") {
-      onHide();
+      onHide(this.element);
     }
     return this.getState();
   };
