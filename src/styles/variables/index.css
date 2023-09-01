@@ -4,17 +4,54 @@
 
   // Colors
   --supamenu-accent-color: #2457f2;
-  --supamenu-text-color: #121212;
   --supamenu-color-dark: #121212;
-  --supamenu-color-dark-900: color-mix(in srgb, #121212, #fff 5%);
-  --supamenu-color-dark-800: color-mix(in srgb, #121212, #fff 7%);
-  --supamenu-color-dark-700: color-mix(in srgb, #121212, #fff 8%);
-  --supamenu-color-dark-600: color-mix(in srgb, #121212, #fff 9%);
-  --supamenu-color-dark-500: color-mix(in srgb, #121212, #fff 11%);
-  --supamenu-color-dark-400: color-mix(in srgb, #121212, #fff 12%);
-  --supamenu-color-dark-300: color-mix(in srgb, #121212, #fff 14%);
-  --supamenu-color-dark-200: color-mix(in srgb, #121212, #fff 15%);
-  --supamenu-color-dark-100: color-mix(in srgb, #121212, #fff 16%);
+  --supamenu-color-dark-900: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 5%
+  );
+  --supamenu-color-dark-800: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 7%
+  );
+  --supamenu-color-dark-700: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 8%
+  );
+  --supamenu-color-dark-600: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 9%
+  );
+  --supamenu-color-dark-500: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 11%
+  );
+  --supamenu-color-dark-400: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 12%
+  );
+  --supamenu-color-dark-300: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 14%
+  );
+  --supamenu-color-dark-200: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 15%
+  );
+  --supamenu-color-dark-100: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 16%
+  );
+
+  --supamenu-text-color: var(--supamenu-color-dark);
 }
 
 .supamenu {
