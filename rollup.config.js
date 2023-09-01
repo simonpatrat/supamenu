@@ -42,6 +42,23 @@ const getPostCssPlugins = () => [
   postcssDiscardDuplicates(),
 ];
 
+const skinNames = ["unstyled", "modal", "classic", "off-canvas"];
+
+const generateSkins = () =>
+  skinNames.map((skinName) => {
+    return postcss({
+      parser: "postcss-scss",
+      // modules: true,
+
+      include: `src/styles/skins/${skinName}/index.css`,
+
+      extract: absolute + `/supamenu-${skinName}.css`,
+      minimize: isProduction ? true : false,
+      sourcemap: isProduction ? false : true,
+      plugins: [...getPostCssPlugins()],
+    });
+  });
+
 const getPostCss = () => {
   return [
     postcss({
@@ -54,17 +71,7 @@ const getPostCss = () => {
       sourcemap: isProduction ? false : true,
       plugins: [...getPostCssPlugins()],
     }),
-    postcss({
-      parser: "postcss-scss",
-      // modules: true,
-
-      include: "src/styles/skins/unstyled/unstyled.css",
-
-      extract: absolute + "/supamenu-unstyled.css",
-      minimize: isProduction ? true : false,
-      sourcemap: isProduction ? false : true,
-      plugins: [...getPostCssPlugins()],
-    }),
+    ...generateSkins(),
   ];
 };
 

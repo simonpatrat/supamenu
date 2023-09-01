@@ -45,7 +45,7 @@
   --supamenu-modal-max-width: 500px;
   --supamenu-modal-width: calc(100vw - 32px);
   --supamenu-modal-height: calc(100vh - 32px);
-  --supamenu-modal-max-height: 500px;
+  --supamenu-modal-max-height: 600px;
 
   --supamenu-off-canvas-link-color-active: color-mix(
     in srgb,
@@ -87,6 +87,7 @@
   );
   --supamenu-classic-menu-dropdown-link-background-hover: transparent;
 
+  // darkmode variables
   --supamenu-darkmode-link-color-focus: color-mix(
     in srgb,
     var(--supamenu-accent-color) 80%,
