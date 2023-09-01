@@ -16,14 +16,5 @@
       transform: rotate(90deg);
       background: var(--supamenu-icon-color);
     }
-
-    .supamenu--darkmode &,
-    [data-theme="dark"] & {
-      background: var(--supamenu-darkmode-icon-color);
-
-      &:before {
-        background: var(--supamenu-darkmode-icon-color);
-      }
-    }
   }
 }

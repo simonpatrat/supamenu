@@ -1,4 +1,10 @@
 .supamenu--off-canvas {
+  &[data-theme="dark"],
+  &.supamenu--darkmode,
+  &.darkmode {
+    --supamenu-toggle-button-background-color: var(--supamenu-color-dark-600);
+  }
+
   @add-mixin off-canvas {
     .spm-component {
       + * {
@@ -6,15 +12,16 @@
       }
     }
 
-    &.supamenu--darkmode,
-    &[data-theme="dark"],
-    &.supamenu--darkmode:not(.supamenu--lightmode),
-    &[data-theme="dark"]:not(.supamenu--lightmode) {
-      background: var(--supamenu-darkmode-off-canvas-background) !important;
-
-      .spm__block__content {
-        background: var(--supamenu-darkmode-off-canvas-background);
+    .spm__block {
+      + .spm__block {
+        margin-top: 8px;
       }
+    }
+
+    background: var(--supamenu-off-canvas-background);
+
+    .spm__block__content {
+      background: var(--supamenu-off-canvas-background);
     }
   }
 }

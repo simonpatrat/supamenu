@@ -1,8 +1,20 @@
 :root {
   --supamenu-menu-width: 300px;
-  --supamenu-accent-color: #2457f2;
-  --supamenu-text-color: #212121;
   --supamenu-max-content-width: 1380px;
+
+  // Colors
+  --supamenu-accent-color: #2457f2;
+  --supamenu-text-color: #121212;
+  --supamenu-color-dark: #121212;
+  --supamenu-color-dark-900: color-mix(in srgb, #121212, #fff 5%);
+  --supamenu-color-dark-800: color-mix(in srgb, #121212, #fff 7%);
+  --supamenu-color-dark-700: color-mix(in srgb, #121212, #fff 8%);
+  --supamenu-color-dark-600: color-mix(in srgb, #121212, #fff 9%);
+  --supamenu-color-dark-500: color-mix(in srgb, #121212, #fff 11%);
+  --supamenu-color-dark-400: color-mix(in srgb, #121212, #fff 12%);
+  --supamenu-color-dark-300: color-mix(in srgb, #121212, #fff 14%);
+  --supamenu-color-dark-200: color-mix(in srgb, #121212, #fff 15%);
+  --supamenu-color-dark-100: color-mix(in srgb, #121212, #fff 16%);
 }
 
 .supamenu {
@@ -12,7 +24,7 @@
   --supamenu-accent-color-dark: color-mix(
     in srgb,
     var(--supamenu-accent-color) 70%,
-    #212121
+    var(--supamenu-color-dark-500)
   );
   --supamenu-accent-color-light: color-mix(
     in srgb,
@@ -25,19 +37,15 @@
   --supamenu-link-color-focus: color-mix(
     in srgb,
     var(--supamenu-accent-color) 70%,
-    #212121
+    var(--supamenu-color-dark-500)
   );
-  --supamenu-link-color-active: color-mix(
-    in srgb,
-    var(--supamenu-accent-color) 80%,
-    var(--supamenu-accent-color)
-  );
+  --supamenu-link-color-active: var(--supamenu-accent-color);
   --supamenu-focus-outline-color: var(--supamenu-accent-color);
   --supamenu-focus-outline-width: 3px;
   --supamenu-focus-outline-style: solid;
   --supamenu-focus-outline: var(--supamenu-focus-outline-width)
     var(--supamenu-focus-outline-style) var(--supamenu-focus-outline-color);
-  --supamenu-icon-color: #2c2834;
+  --supamenu-icon-color: var(--supamenu-color-dark-800);
   --supamenu-toggle-button-background-color: transparent;
   --supamenu-mega-menu-dropdown-min-height: 400px;
   --supamenu-mega-menu-dropdown-width: 100%;
@@ -47,13 +55,18 @@
   --supamenu-modal-height: calc(100vh - 32px);
   --supamenu-modal-max-height: 600px;
 
+  --supamenu-off-canvas-background: var(--supamenu-background);
   --supamenu-off-canvas-link-color-active: color-mix(
     in srgb,
     var(--supamenu-link-color-active) 50%,
     var(--supamenu-text-color)
   );
   --supamenu-off-canvas-menu-box-shadow: none;
-  --supamenu-off-canvas-menu-border-color: #eee;
+  --supamenu-off-canvas-menu-border-color: color-mix(
+    in srgb,
+    var(--supamenu-background),
+    #000 11%
+  );
   --supamenu-off-canvas-link-background-active: color-mix(
     in srgb,
     var(--supamenu-link-color-active) 15%,
@@ -81,69 +94,79 @@
   --supamenu-classic-modal-menu-border-radius: 16px;
   --supamenu-classic-menu-dropdown-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.05);
   --supamenu-classic-menu-dropdown-min-width: 220px;
-  --supamenu-dropdown-distance: 0;
+  --supamenu-dropdown-distance: 0px;
   --supamenu-menu-classic-container-max-width: var(
     --supamenu-max-content-width
   );
   --supamenu-classic-menu-dropdown-link-background-hover: transparent;
 
   // darkmode variables
-  --supamenu-darkmode-link-color-focus: color-mix(
-    in srgb,
-    var(--supamenu-accent-color) 80%,
-    #fff
-  );
-  --supamenu-darkmode-off-canvas-link-color-active: color-mix(
-    in srgb,
-    var(--supamenu-link-color-active) 50%,
-    var(--supamenu-darkmode-link-color-hover)
-  );
-  --supamenu-darkmode-background: #2c2834;
-  --supamenu-darkmode-text-color: color-mix(
-    in srgb,
-    var(--supamenu-accent-color) 8%,
-    #fff
-  );
-  --supamenu-darkmode-icon-color: var(--supamenu-darkmode-text-color);
-  --supamenu-darkmode-link-color-hover: color-mix(
-    in srgb,
-    var(--supamenu-link-color-hover) 60%,
-    #fff
-  );
-  --supamenu-darkmode-toggle-button-background-color: color-mix(
-    in srgb,
-    var(--supamenu-darkmode-background) 95%,
-    var(--supamenu-accent-color-light)
-  );
-  --supamenu-darkmode-toggle-button-background-color-hover: color-mix(
-    in srgb,
-    var(--supamenu-darkmode-toggle-button-background-color) 96%,
-    #fff
-  );
-  --supamenu-darkmode-off-canvas-link-color-active: color-mix(
-    in srgb,
-    var(--supamenu-link-color-active) 50%,
-    var(--supamenu-darkmode-link-color-hover)
-  );
-  --supamenu-darkmode-off-canvas-background: color-mix(
-    in srgb,
-    var(--supamenu-darkmode-background) 80%,
-    #000
-  );
-  --supamenu-darkmode-classic-menu-dropdown-background: color-mix(
-    in srgb,
-    var(--supamenu-darkmode-background) 95%,
-    #fff
-  );
-  --supamenu-darkmode-classic-menu-dropdown-border: 1px solid
-    color-mix(in srgb, var(--supamenu-darkmode-background) 90%, #fff);
-
   &[data-theme="dark"],
-  &.darkmode {
+  &.darkmode,
+  &.supamenu--darkmode {
+    --supamenu-background: var(--supamenu-color-dark-600);
+    --supamenu-off-canvas-background: var(--supamenu-color-dark-900);
+    --supamenu-text-color: color-mix(
+      in srgb,
+      var(--supamenu-accent-color) 8%,
+      #fff
+    );
+
+    --supamenu-icon-color: var(--supamenu-text-color);
+
     --supamenu-off-canvas-menu-border-color: color-mix(
       in srgb,
-      var(--supamenu-darkmode-off-canvas-background) 85%,
+      var(--supamenu-color-dark) 85%,
       #000
+    );
+    --supamenu-link-color-hover: color-mix(
+      in srgb,
+      var(--supamenu-accent-color),
+      #fff 40%
+    );
+
+    --supamenu-classic-menu-dropdown-background: var(--supamenu-color-dark-500);
+    --supamenu-classic-menu-dropdown-border: 1px solid
+      var(--supamenu-color-dark-200);
+
+    --supamenu-toggle-button-background-color: color-mix(
+      in srgb,
+      var(--supamenu-background) 95%,
+      var(--supamenu-accent-color-light)
+    );
+
+    --supamenu-toggle-button-background-color-hover: color-mix(
+      in srgb,
+      var(--supamenu-darkmode-toggle-button-background-color) 96%,
+      #fff
+    );
+
+    --supamenu-link-color-focus: color-mix(
+      in srgb,
+      var(--supamenu-accent-color) 80%,
+      #fff
+    );
+
+    --supamenu-off-canvas-link-color-active: color-mix(
+      in srgb,
+      var(--supamenu-link-color-active) 50%,
+      var(--supamenu-link-color-hover)
+    );
+
+    --supamenu-scrollbar-color: rgba(255, 255, 255, 0.5);
+
+    --supamenu-off-canvas-link-background-active: color-mix(
+      in srgb,
+      var(--supamenu-link-color-active) 30%,
+      var(--supamenu-color-dark-800)
+    );
+
+    --supamenu-off-canvas-link-background-hover: var(--supamenu-color-dark-500);
+
+    --supamenu-off-canvas-link-background-active-hover: color-mix(
+      in srgb,
+      var(--supamenu-off-canvas-link-background-active) 95%,
+      #fff
     );
   }
 }

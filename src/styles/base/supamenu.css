@@ -33,15 +33,6 @@
     }
   }
 
-  &.supamenu--darkmode,
-  &[data-theme="dark"] {
-    a {
-      &:hover {
-        color: var(--supamenu-darkmode-link-color-hover);
-      }
-    }
-  }
-
   p {
     display: block;
     margin: 10px 0;
@@ -151,7 +142,9 @@
   .spm__block {
     &.spm__block--visible {
       > .spm__toggle-button,
-      > button.spm__toggle-button {
+      > button.spm__toggle-button,
+      > .spm__block__title > .spm__toggle-button,
+      > .spm__block__title > button.spm__toggle-button {
         .spm-icon {
           transform: rotate(180deg);
           transition-delay: 50ms;
@@ -214,14 +207,15 @@
     margin: 0 8px 0 16px;
   }
 
-  &.supamenu--darkmode,
-  &[data-theme="dark"] {
+  &[data-theme="dark"],
+  &.darkmode,
+  &.supamenu--darkmode {
     .spm-search {
       input {
-        color: var(--supamenu-text-color);
+        color: var(--supamenu-color-dark);
 
         &::placeholder {
-          color: var(--supamenu-text-color);
+          color: var(--supamenu-color-dark);
           opacity: 1;
         }
 
@@ -231,10 +225,10 @@
       }
 
       .spm-search__icon {
-        border: 2px solid var(--supamenu-icon-color);
+        border: 2px solid var(--supamenu-color-dark);
 
         &:after {
-          background: var(--supamenu-icon-color);
+          background: var(--supamenu-color-dark);
         }
       }
     }
@@ -252,20 +246,23 @@
     cursor: pointer;
   }
 
-  &.supamenu--darkmode,
-  &[data-theme="dark"] {
+  &[data-theme="dark"],
+  &.darkmode,
+  &.supamenu--darkmode {
     &:not(.supamenu--lightmode) {
-      @add-mixin darkmode {
-        .spm-search {
-          background: #dedadd;
+      pre {
+        filter: invert(6%);
+      }
 
-          &:hover {
-            background: #cac6d2;
-          }
-        }
+      li::marker {
+        color: #666;
+      }
 
-        .spm__block__content {
-          background: var(--supamenu-darkmode-background);
+      .spm-search {
+        background: #dedadd;
+
+        &:hover {
+          background: #cac6d2;
         }
       }
     }

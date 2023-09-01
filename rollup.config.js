@@ -26,8 +26,6 @@ const isProduction = process.env.NODE_ENV === "production";
 
 const absolute = path.resolve("dist/css");
 
-console.log({ absolute });
-
 const getPostCssPlugins = () => [
   atImport(),
   postcssEach(),

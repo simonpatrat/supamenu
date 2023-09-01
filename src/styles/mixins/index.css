@@ -60,39 +60,6 @@
   @mixin-content;
 }
 
-@define-mixin darkmode {
-  --supamenu-scrollbar-color: rgba(255, 255, 255, 0.5);
-
-  pre {
-    filter: invert(6%);
-  }
-
-  li::marker {
-    color: #666;
-  }
-
-  a {
-    &:focus,
-    &:focus-visible {
-      color: var(--supamenu-darkmode-link-color-focus);
-    }
-
-    &:active,
-    &.active {
-      color: var(--supamenu-darkmode-off-canvas-link-color-active);
-
-      &:before {
-        background-color: var(--supamenu-darkmode-off-canvas-link-color-active);
-      }
-    }
-  }
-
-  background: var(--supamenu-darkmode-background);
-  color: var(--supamenu-darkmode-text-color);
-
-  @mixin-content;
-}
-
 @define-mixin off-canvas {
   @add-mixin sidebar-styles {
     > {
@@ -243,41 +210,6 @@
 
         > * {
           display: block;
-        }
-      }
-    }
-
-    &.supamenu--darkmode,
-    &[data-theme="dark"] {
-      border-right: 1px solid var(--supamenu-off-canvas-menu-border-color);
-
-      ul li a {
-        &:hover,
-        &:focus {
-          background: var(
-            --supamenu-darkmode-toggle-button-background-color-hover
-          );
-        }
-
-        &:focus {
-          color: var(--supamenu-darkmode-text-color);
-        }
-
-        &:before {
-          background: var(--supamenu-darkmode-text-color);
-        }
-      }
-
-      .spm__toggle-button,
-      button.spm__toggle-button {
-        background: var(--supamenu-darkmode-toggle-button-background-color);
-        color: var(--supamenu-darkmode-text-color);
-
-        &:hover,
-        &:focus-visible {
-          background: var(
-            --supamenu-darkmode-toggle-button-background-color-hover
-          );
         }
       }
     }

@@ -142,6 +142,7 @@ if (colorSelector) {
 }
 
 const currentHref = window.location.pathname;
+
 document.querySelectorAll(`a[href*="${currentHref}"]`).forEach((elem) => {
   elem.classList.add("active");
 
