@@ -131,7 +131,7 @@
   --supamenu-classic-modal-menu-border-radius: 16px;
   --supamenu-classic-menu-dropdown-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.05);
   --supamenu-classic-menu-dropdown-min-width: 220px;
-  --supamenu-dropdown-distance: 0px;
+  --supamenu-dropdown-distance: 0;
   --supamenu-menu-classic-container-max-width: var(
     --supamenu-max-content-width
   );

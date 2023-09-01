@@ -129,7 +129,7 @@
 
         .spm__block__content {
           position: absolute;
-          top: calc(100% + var(--supamenu-dropdown-distance, 0px));
+          top: calc(100% + var(--supamenu-dropdown-distance, 0) * 1px);
           left: 0;
           min-width: var(--supamenu-classic-menu-dropdown-min-width);
           visibility: hidden;
@@ -202,7 +202,7 @@
             position: absolute;
             display: block;
             width: 100%;
-            height: var(--supamenu-dropdown-distance, 0px);
+            height: calc(var(--supamenu-dropdown-distance, 0) * 1px);
             min-width: var(--supamenu-classic-menu-dropdown-min-width);
             top: 100%;
             left: 0;
@@ -236,7 +236,7 @@
         > .spm__block {
           .spm__block__content {
             top: auto;
-            bottom: calc(100% + var(--supamenu-dropdown-distance, 0px) * 1px);
+            bottom: calc(100% + var(--supamenu-dropdown-distance, 0) * 1px);
           }
         }
       }
