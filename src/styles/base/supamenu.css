@@ -126,7 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: var(--supamenu-menu-classic-container-max-width);
+    max-width: var(--supamenu-classic-menu-container-max-width);
     flex: 0 0 calc(100% - 32px);
     margin: auto;
 
