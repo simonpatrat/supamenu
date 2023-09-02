@@ -7,8 +7,11 @@
 body {
   padding: 0;
   margin: 0;
-  background: var(--dot-color-bg-lighter);
-  color: var(--dot-color-text-dark);
+  background: var(
+    --dot-color-bg-lighter,
+    color-mix(in srgb, var(--supamenu-accent-color), #fff 70%)
+  );
+  color: var(--dot-color-text-dark, #121212);
   font-family: "Public Sans", sans-serif, "Franklin Gothic Medium",
     "Arial Narrow", Arial, sans-serif;
   line-height: 1.5;
