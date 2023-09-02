@@ -6,6 +6,12 @@
   --supamenu-font-weight: bold;
   --supamenu-container-max-width: calc(100% - 3rem);
 
+  background: color-mix(
+    in srgb,
+    var(--supamenu-background),
+    rgba(0, 0, 0, 0.8) 8%
+  );
+
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +21,15 @@
   overflow-y: auto;
   margin-top: 0;
   display: none;
+  animation: reveal 200ms ease-in-out;
+
+  &.spm-animation-slideInFromBottom {
+    animation: slideInFromBottom 200ms ease-in-out;
+  }
+
+  &.spm-animation-slideInFromTop {
+    animation: slideInFromTop 200ms ease-in-out;
+  }
 
   * {
     box-sizing: border-box;

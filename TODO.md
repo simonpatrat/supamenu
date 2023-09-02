@@ -1,13 +1,5 @@
 # TODO:
 
-### Better darkmode
-
-- change variables values instead of creating other variables ?
-  -- maybe it is better to keep hard coded values fro dark theme specific variables
-  -- we can let them heritate from dot-css framework theme 🤔
-
-## focus trap in modals
-
 ### menu grid system?
 
 --- GIT
@@ -16,11 +8,7 @@
 
 --- EVOLUTIONS
 
-### react version
-
-### Full page menu css grid
-
-### modal menu
+### react version [WIP]
 
 ### floating menu ?
 
@@ -29,6 +17,14 @@
 **Done !**
 
 ---
+
+### Better darkmode ✅
+
+## focus trap in modals ✅
+
+### modal menu ✅
+
+### Full page menu css grid ✅
 
 ### menu container with max-width ✅
 

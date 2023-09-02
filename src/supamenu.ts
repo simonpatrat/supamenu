@@ -89,6 +89,8 @@ export class SupaMenu {
       .querySelector(".supamenu-page")
       ?.classList.add("supamenu-page--menu-visible");
 
+    document.body.classList.add("supamenu-visible");
+
     this.currentTrappedFocus = trapFocus(this.getElement() as HTMLElement);
 
     this.HTMLElement?.dispatchEvent(this.events.show);
@@ -105,6 +107,8 @@ export class SupaMenu {
     document
       .querySelector(".supamenu-page")
       ?.classList.remove("supamenu-page--menu-visible");
+
+    document.body.classList.remove("supamenu-visible");
 
     if (this.currentTrappedFocus) {
       this.currentTrappedFocus?.onClose();

@@ -134,6 +134,7 @@
 
           &.active {
             color: var(--supamenu-off-canvas-link-color-active);
+            font-weight: bold;
 
             &:before {
               background: var(--supamenu-link-color-active);

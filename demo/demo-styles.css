@@ -9,7 +9,7 @@ body {
   margin: 0;
   background: var(
     --dot-color-bg-lighter,
-    color-mix(in srgb, var(--supamenu-accent-color), #fff 70%)
+    color-mix(in srgb, var(--supamenu-accent-color), #fff 60%)
   );
   color: var(--dot-color-text-dark, #121212);
   font-family: "Public Sans", sans-serif, "Franklin Gothic Medium",
@@ -23,9 +23,9 @@ body {
   border-radius: 30px;
   background: linear-gradient(
     137deg,
-    #6c3ec5 0%,
-    #9c59e3 20%,
-    var(--supamenu-accent-color) 100%
+    color-mix(in srgb, var(--supamenu-accent-color) 40%, black) 0%,
+    var(--supamenu-accent-color) 40%,
+    #6c3ec5 100%
   );
   display: flex;
   justify-content: center;

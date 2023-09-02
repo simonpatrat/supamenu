@@ -332,15 +332,6 @@
   }
 }
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @media (max-width: 768px) {
   .supamenu--classic {
     .spm-inner-container {
