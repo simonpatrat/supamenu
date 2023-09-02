@@ -6,7 +6,9 @@
   font-family: var(--supamenu-font-family);
   letter-spacing: 1px;
   font-size: var(--supamenu-font-size);
+  font-weight: var(--supamenu-font-weight);
   line-height: 1.5;
+  text-transform: var(--supamenu-text-transform);
 
   @add-mixin scrollbar-styles;
 
@@ -126,7 +128,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: var(--supamenu-classic-menu-container-max-width);
+    max-width: var(--supamenu-container-max-width);
     flex: 0 0 calc(100% - 32px);
     margin: auto;
 
@@ -136,6 +138,30 @@
 
     > :last-child {
       padding-right: 0;
+    }
+
+    &.spm-grid {
+      display: grid;
+
+      &.grid-2-cols {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &.grid-3-cols {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      &.grid-4-cols {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      &.grid-6-cols {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      &.grid-8-cols {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
     }
   }
 

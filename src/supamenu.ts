@@ -3,6 +3,7 @@ import "./styles/skins/unstyled/index.css";
 import "./styles/skins/classic/index.css";
 import "./styles/skins/modal/index.css";
 import "./styles/skins/off-canvas/index.css";
+import "./styles/skins/full-screen/index.css";
 
 import { CLASSNAMES, CLOSE_MENU_SELECTOR, ERRORS } from "./lib/constants";
 import { Toggler } from "./lib/Toggler";

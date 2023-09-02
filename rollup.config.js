@@ -30,8 +30,9 @@ const getPostCssPlugins = () => [
   atImport(),
   postcssEach(),
   postcssMixins(),
-  postcssNested(),
   rfs(),
+  postcssNested(),
+
   postcssPresetEnv({
     browsers: ["> 0.2% and not dead"],
   }),
@@ -40,7 +41,7 @@ const getPostCssPlugins = () => [
   postcssDiscardDuplicates(),
 ];
 
-const skinNames = ["unstyled", "modal", "classic", "off-canvas"];
+const skinNames = ["unstyled", "modal", "classic", "off-canvas", "full-screen"];
 
 const generateSkins = () =>
   skinNames.map((skinName) => {

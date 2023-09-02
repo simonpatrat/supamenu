@@ -57,7 +57,15 @@
 .supamenu {
   --supamenu-font-family: inherit;
   --supamenu-font-size: rfs(0.875rem);
+  --supamenu-font-weight: inherit;
+  --supamenu-text-transform: none;
   --supamenu-background: #fff;
+  --supamenu-border-color: color-mix(
+    in srgb,
+    var(--supamenu-background),
+    #000 11%
+  );
+  --supamenu-border-radius: 0;
   --supamenu-accent-color-dark: color-mix(
     in srgb,
     var(--supamenu-accent-color) 70%,
@@ -99,11 +107,7 @@
     var(--supamenu-text-color)
   );
   --supamenu-off-canvas-menu-box-shadow: none;
-  --supamenu-off-canvas-menu-border-color: color-mix(
-    in srgb,
-    var(--supamenu-background),
-    #000 11%
-  );
+  --supamenu-off-canvas-menu-border-color: var(--supamenu-border-color);
   --supamenu-off-canvas-link-background-active: color-mix(
     in srgb,
     var(--supamenu-link-color-active) 15%,
@@ -132,9 +136,7 @@
   --supamenu-classic-menu-dropdown-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.05);
   --supamenu-classic-menu-dropdown-min-width: 220px;
   --supamenu-dropdown-distance: 0;
-  --supamenu-classic-menu-container-max-width: var(
-    --supamenu-max-content-width
-  );
+  --supamenu-container-max-width: var(--supamenu-max-content-width);
   --supamenu-classic-menu-dropdown-link-background-hover: transparent;
 
   // darkmode variables
