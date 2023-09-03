@@ -125,7 +125,7 @@
   );
   --supamenu-off-canvas-menu-link-border-radius: 10px;
 
-  --supamenu-classic-menu-border: none;
+  --supamenu-classic-menu-border: 1px solid var(--supamenu-border-color);
   --supamenu-classic-menu-box-shadow: none;
   --supamenu-classic-menu-scrolled-box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.05);
   --supamenu-classic-menu-border-radius: 0;

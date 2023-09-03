@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: var(--supamenu-classic-menu-border);
+    border-bottom: var(--supamenu-classic-menu-border);
     position: relative;
     z-index: 2;
     transform: translateY(0);
@@ -141,10 +141,15 @@
           border-radius: var(--supamenu-classic-menu-dropdown-border-radius);
           border: var(--supamenu-classic-menu-dropdown-border);
           max-height: 70vh;
-          overflow-y: auto;
-          overflow-x: hidden;
+
           transition-delay: 0ms;
           background: var(--supamenu-classic-menu-dropdown-background);
+
+          > .spm__list {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 70vh;
+          }
 
           .spm__list__item {
             padding: 0;
