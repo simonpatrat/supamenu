@@ -1,4 +1,6 @@
 .supamenu--off-canvas {
+  @add-mixin supamenu-base;
+
   &[data-theme="dark"],
   &.supamenu--darkmode,
   &.darkmode {

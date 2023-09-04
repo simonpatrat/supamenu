@@ -1,4 +1,6 @@
 .supamenu--classic {
+  @add-mixin supamenu-base;
+
   --supamenu-toggle-button-background-color: transparent;
 
   &[data-theme="dark"],

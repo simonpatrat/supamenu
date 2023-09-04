@@ -1,4 +1,6 @@
 .supamenu--modal {
+  @add-mixin supamenu-base;
+
   .spm-inner-container {
     display: block;
   }

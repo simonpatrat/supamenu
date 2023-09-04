@@ -1,4 +1,4 @@
-.supamenu {
+@define-mixin supamenu-base {
   box-sizing: border-box;
   padding: 16px;
   background-color: var(--supamenu-background);

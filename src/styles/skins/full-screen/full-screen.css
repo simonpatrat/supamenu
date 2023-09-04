@@ -1,5 +1,7 @@
 .supamenu.supamenu--full-screen,
 .supamenu--full-screen {
+  @add-mixin supamenu-base;
+
   --supamenu-font-size: rfs(3rem);
   --supamenu-border-radius: rfs(1rem);
   --supamenu-text-transform: uppercase;
