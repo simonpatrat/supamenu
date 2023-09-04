@@ -232,7 +232,7 @@
 
                 > .spm__block__content {
                   max-width: 100%;
-                  display: none;
+
                   left: 100%;
                   top: -1px;
                   height: 100%;
@@ -244,15 +244,17 @@
                     --supamenu-classic-menu-dropdown-border-radius
                   );
                   padding: 0 0 2rem 0;
+                  transition: all 100ms ease-in-out;
+                  transition-delay: 300ms;
                 }
 
                 &.spm__block--visible,
                 &:hover {
                   > .spm__block__content {
-                    display: block !important;
                     opacity: 1;
                     visibility: visible;
                     padding: 0 0 2rem 0;
+                    transition-delay: 0ms;
                   }
                 }
               }
@@ -263,6 +265,7 @@
         .spm__mega__panel {
           min-height: var(--supamenu-mega-menu-dropdown-min-height);
           width: var(--supamenu-mega-menu-dropdown-width);
+          overflow-y: auto;
         }
 
         .spm__mega__panel__content {
