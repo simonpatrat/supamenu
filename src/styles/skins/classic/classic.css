@@ -127,6 +127,7 @@
         button.spm__toggle-button {
           display: inline-flex;
           flex: 0;
+          background: transparent;
         }
 
         .spm__block__content {
