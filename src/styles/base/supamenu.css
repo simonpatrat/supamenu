@@ -76,6 +76,8 @@
 
   .spm__toggle-button,
   button.spm__toggle-button {
+    all: unset;
+    box-sizing: border-box;
     border: none;
     background: var(--supamenu-toggle-button-background-color, transparent);
     box-shadow: none;
