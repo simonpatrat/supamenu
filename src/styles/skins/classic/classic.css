@@ -171,9 +171,6 @@
               position: relative;
               width: 100%;
               color: inherit;
-
-              border-top: 1px solid var(--supamenu-border-color);
-              border-bottom: 1px solid var(--supamenu-border-color);
               background: var(--supamenu-background);
 
               > .spm__block__title {

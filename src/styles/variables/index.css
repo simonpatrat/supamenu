@@ -148,6 +148,11 @@
   &.darkmode,
   &.supamenu--darkmode {
     --supamenu-background: var(--supamenu-color-dark-600);
+    --supamenu-border-color: color-mix(
+      in srgb,
+      var(--supamenu-background),
+      #000 11%
+    );
     --supamenu-off-canvas-background: var(--supamenu-color-dark-900);
     --supamenu-text-color: color-mix(
       in srgb,
