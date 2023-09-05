@@ -10,7 +10,7 @@
   transform: translateX(calc(var(--supamenu-menu-width) * -1));
   border-right: 1px solid var(--supamenu-off-canvas-menu-border-color);
   overflow-y: auto;
-  z-index: 3;
+  z-index: var(--supamenu-z-index);
   box-shadow: var(--supamenu-off-canvas-menu-box-shadow, none);
 
   @mixin-content;
@@ -55,7 +55,7 @@
   width: 100%;
   margin-left: 0;
   margin-right: 0;
-  z-index: 1500;
+  z-index: var(--supamenu-z-index);
 
   @mixin-content;
 }

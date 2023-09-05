@@ -93,23 +93,6 @@ a {
   color: rgb(50, 69, 240);
 }
 
-/* Do not invert media (revert the invert). */
-body.darkmode img,
-body.darkmode video,
-body.darkmode iframe {
-  filter: invert(100%) hue-rotate(180deg);
-}
-
-/* Improve contrast on icons. */
-body.darkmode .icon {
-  filter: invert(15%) hue-rotate(180deg);
-}
-
-/* Re-enable code block backgrounds. */
-body.darkmode pre {
-  filter: invert(6%);
-}
-
 /* Improve contrast on list item markers. */
 body.darkmode li::marker {
   color: var(--dot-color-text-light);

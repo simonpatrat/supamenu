@@ -1,6 +1,7 @@
 :root {
   --supamenu-menu-width: 300px;
   --supamenu-max-content-width: 1380px;
+  --supamenu-z-index: 1000;
 
   // Colors
   --supamenu-accent-color: #2457f2;
@@ -66,6 +67,7 @@
     #000 11%
   );
   --supamenu-border-radius: 0;
+  --supamenu-image-border-radius: 16px;
   --supamenu-accent-color-dark: color-mix(
     in srgb,
     var(--supamenu-accent-color) 70%,
@@ -95,10 +97,11 @@
   --supamenu-mega-menu-dropdown-min-height: 400px;
   --supamenu-mega-menu-dropdown-width: 100%;
 
-  --supamenu-modal-max-width: 500px;
+  --supamenu-modal-border: 1px solid var(--supamenu-border-color);
+  --supamenu-modal-max-width: 800px;
   --supamenu-modal-width: calc(100vw - 32px);
   --supamenu-modal-height: calc(100vh - 32px);
-  --supamenu-modal-max-height: 600px;
+  --supamenu-modal-max-height: 800px;
 
   --supamenu-off-canvas-background: var(--supamenu-background);
   --supamenu-off-canvas-link-color-active: color-mix(
@@ -125,6 +128,7 @@
   );
   --supamenu-off-canvas-menu-link-border-radius: 10px;
 
+  --supamenu-classic-navbar-height: 70px;
   --supamenu-classic-menu-border: 1px solid var(--supamenu-border-color);
   --supamenu-classic-menu-box-shadow: none;
   --supamenu-classic-menu-scrolled-box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.05);

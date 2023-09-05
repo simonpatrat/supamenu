@@ -18,10 +18,10 @@
     left: 50%;
     right: auto;
     bottom: auto;
-    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.8);
     border-radius: var(--supamenu-classic-modal-menu-border-radius);
     animation: reveal 300ms ease-in-out;
-    border-right: none !important;
+    border: var(--supamenu-modal-border);
     transform: translate(-50%, -50%);
 
     &.supamenu--visible {
@@ -59,6 +59,11 @@
       &:focus-visible {
         opacity: 1;
       }
+    }
+    &[data-theme="dark"],
+    &.darkmode,
+    &.supamenu--darkmode {
+      box-shadow: 0px 0px 0px 1000px rgba(255, 255, 255, 0.7);
     }
   }
 }

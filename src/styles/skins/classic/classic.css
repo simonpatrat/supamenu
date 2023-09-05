@@ -17,14 +17,15 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
+    height: var(--supamenu-classic-navbar-height);
     padding: 0;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     border-bottom: var(--supamenu-classic-menu-border);
     position: relative;
-    z-index: 2;
+    z-index: var(--supamenu-z-index);
     transform: translateY(0);
     border-radius: var(--supamenu-classic-menu-border-radius);
     box-shadow: var(--supamenu-classic-menu-box-shadow);
@@ -106,10 +107,13 @@
       align-items: center;
       justify-content: flex-start;
       max-width: var(--supamenu-container-max-width);
-      margin: auto;
+      margin: 0 auto;
+      height: 100%;
 
       > .spm__block {
         position: relative;
+        display: flex;
+        height: 100%;
 
         &.spm__mega {
           position: static;
@@ -117,7 +121,6 @@
 
         > .spm__block__title {
           padding: 0 8px;
-          margin: 12px 0;
 
           a {
             padding: 8px;
@@ -140,7 +143,7 @@
           opacity: 0;
           box-shadow: var(--supamenu-classic-menu-dropdown-box-shadow);
           padding: 0px 0px 2rem 0px;
-          z-index: 2;
+          z-index: calc(var(--supamenu-z-index) - 1);
           border-radius: var(--supamenu-classic-menu-dropdown-border-radius);
           border: var(--supamenu-classic-menu-dropdown-border);
           max-height: 70vh;
@@ -269,7 +272,14 @@
         }
 
         .spm__mega__panel__content {
-          padding: 16px;
+          padding: 16px 0;
+
+          img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            border-radius: var(--supamenu-image-border-radius);
+          }
         }
 
         &:hover,
@@ -333,8 +343,9 @@
 
     .spm__mega__panel__content__block__title {
       text-transform: uppercase;
-      color: color-mix(in srgb, var(--supamenu-accent-color) 30%, #92949a);
+      color: color-mix(in srgb, var(--supamenu-accent-color), #92949a 60%);
       font-size: 0.775rem;
+      font-weight: bold;
     }
 
     .spm__close-menu-button {
@@ -343,7 +354,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .supamenu--classic {
     .spm-inner-container {
       display: block;
