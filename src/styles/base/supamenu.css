@@ -40,6 +40,17 @@
     margin: 10px 0;
   }
 
+  /*
+    First reset menu buttons
+  */
+  .spm__toggle-button,
+  button.spm__toggle-button {
+    all: unset;
+  }
+
+  /*
+    Then apply focus effects on interactive elements
+  */
   a,
   button,
   input,
@@ -74,9 +85,11 @@
     }
   }
 
+  /*
+    Finally define buttons base styles
+  */
   .spm__toggle-button,
   button.spm__toggle-button {
-    all: unset;
     box-sizing: border-box;
     border: none;
     background: var(--supamenu-toggle-button-background-color, transparent);
