@@ -266,6 +266,9 @@
           min-height: var(--supamenu-mega-menu-dropdown-min-height);
           width: var(--supamenu-mega-menu-dropdown-width);
           overflow-y: auto;
+          margin: 0 auto;
+          left: 50%;
+          margin-left: calc((var(--supamenu-mega-menu-dropdown-width) / 2) * -1);
         }
 
         .spm__mega__panel__content {
@@ -322,6 +325,15 @@
           .spm__block__content {
             top: auto;
             bottom: calc(100% + var(--supamenu-dropdown-distance, 0) * 1px);
+            transform: translateY(10px);
+          }
+
+          &:hover,
+          &:focus,
+            &.spm__block--visible {
+            .spm__block__content {
+              transform: translateY(0);
+            }
           }
         }
       }
