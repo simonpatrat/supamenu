@@ -5,7 +5,12 @@ import "./styles/skins/modal/index.css";
 import "./styles/skins/off-canvas/index.css";
 import "./styles/skins/full-screen/index.css";
 
-import { CLASSNAMES, CLOSE_MENU_SELECTOR, ERRORS } from "./lib/constants";
+import {
+  BODY_CLICK_LISTENER_TIMEOUT_BEFORE_ADD_MS,
+  CLASSNAMES,
+  CLOSE_MENU_SELECTOR,
+  ERRORS,
+} from "./lib/constants";
 import { Toggler } from "./lib/Toggler";
 import { trapFocus } from "./lib/utils/focusTrap";
 import { areSiblings } from "./lib/utils/DOMUtils";
@@ -98,6 +103,10 @@ export class SupaMenu {
     if (typeof this.settings?.onShow === "function") {
       this.settings.onShow();
     }
+
+    setTimeout(() => {
+      document.body.addEventListener("click", this.handleClickOnBody);
+    }, BODY_CLICK_LISTENER_TIMEOUT_BEFORE_ADD_MS);
   };
 
   handleHide = () => {
@@ -119,6 +128,8 @@ export class SupaMenu {
     if (typeof this.settings?.onHide === "function") {
       this.settings.onHide();
     }
+
+    document.body.removeEventListener("click", this.handleClickOnBody);
   };
 
   show = () => {
@@ -292,10 +303,14 @@ export class SupaMenu {
   };
 
   handleClickOnBody = () => {
-    if (!this.getElement()?.classList.contains("supamenu--off-canvas")) {
+    if (this.getElement()?.classList.contains("supamenu--classic")) {
       this.togglers.forEach((t) => {
         if (t.isVisible) t.hide();
       });
+    } else {
+      if (this.getIsVisible() === true) {
+        this.hide();
+      }
     }
   };
 
@@ -351,7 +366,6 @@ export class SupaMenu {
         block.addEventListener("click", this.handleClickOnMenuBlock);
       });
     }
-    document.body.addEventListener("click", this.handleClickOnBody);
   };
 
   removeListeners = () => {

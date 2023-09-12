@@ -41,7 +41,6 @@ export const trapFocus = (
 
   return {
     onClose: () => {
-      console.log("TRAP CLOSE!");
       document.removeEventListener("focus", handleFocus, true);
       (prevFocusableElement as HTMLElement).focus();
     },

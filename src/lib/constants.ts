@@ -11,3 +11,5 @@ export const CLASSNAMES = {
 };
 
 export const CLOSE_MENU_SELECTOR = ".spm__close-menu-button";
+
+export const BODY_CLICK_LISTENER_TIMEOUT_BEFORE_ADD_MS = 500;
