@@ -2,6 +2,8 @@
 
 ### menu grid system?
 
+### transitions timings as css variables
+
 --- GIT
 
 ### Monorepo

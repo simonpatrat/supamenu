@@ -148,6 +148,31 @@ if (colorSelector) {
   });
 }
 
+const widthSelector = document.querySelector("#width");
+
+if (widthSelector) {
+  widthSelector.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  widthSelector.addEventListener("change", (event) => {
+    event.stopPropagation();
+    const { value } = event.target;
+    console.log({ value });
+
+    if (value) {
+      const root = document.querySelector(":root");
+      if (root) {
+        root.style.setProperty("--supamenu-menu-width", value + "px");
+      }
+      const menus = document.querySelectorAll(".supamenu");
+      menus.forEach((m) => {
+        m.style.setProperty("--supamenu-menu-width", value + "px");
+      });
+    }
+  });
+}
+
 const currentHref = window.location.pathname;
 
 document.querySelectorAll(`a[href*="${currentHref}"]`).forEach((elem) => {

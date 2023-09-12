@@ -28,11 +28,42 @@
 
         <div class="spm__group">
           <div class="spm__block">
+            <div class="spm__block__title">supamenu skins</div>
+            <ul class="spm__list">
+              <li class="spm__list__item">
+                <a href="/demo/index.html">Classic</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/demo/modal.html">modal menu</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/demo/off-canvas.html">off-canvas menu</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/demo/off-canvas-2.html">off-canvas v2</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/demo/full-screen.html">Full screen menu</a>
+              </li>
+              <li class="spm__list__item">
+                <a href="/demo/unstyled.html">unstyled menu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="spm__block">
             <button type="button" class="spm__block__title spm__toggle-button">
               Block 1
               <span class="spm-icon spm-icon--chevron" aria-hidden></span>
             </button>
             <div class="spm__block__content">
+              <button
+                type="button"
+                class="spm__toggle-button"
+                data-action="close"
+              >
+                <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+                Close Block 1
+              </button>
               <ul class="spm__list">
                 <li class="spm__list__item">
                   <a href="/demo/index.html">Classic menu</a>
@@ -62,9 +93,20 @@
                       ></span>
                     </button>
                     <div class="spm__block__content">
+                      <button
+                        type="button"
+                        class="spm__toggle-button"
+                        data-action="close"
+                      >
+                        <span
+                          class="spm-icon spm-icon--chevron"
+                          aria-hidden
+                        ></span>
+                        Close Block 1-1
+                      </button>
                       <ul class="spm__list t-visible">
                         <li class="spm__list__item">
-                          <a href="">Lorem ipsum dolor sit.</a>
+                          <a href="">Level 1-1 Lorem ipsum dolor sit.</a>
                         </li>
                         <li class="spm__list__item">
                           <a href="">Lorem, ipsum dolor.</a>
@@ -97,6 +139,14 @@
               <span class="spm-icon spm-icon--chevron" aria-hidden></span>
             </button>
             <div class="spm__block__content">
+              <button
+                type="button"
+                class="spm__toggle-button"
+                data-action="close"
+              >
+                <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+                Close Block 2
+              </button>
               <ul class="spm__list">
                 <li class="spm__list__item">
                   <a href="">Lorem, ipsum dolor.</a>
@@ -122,12 +172,21 @@
         </div>
 
         <div class="spm__group spm__group--bottom">
+          <div class="spm__block__title">Additional</div>
           <div class="spm__block">
-            <button type="button" class="spm__block__title spm__toggle-button">
+            <button type="button" class="spm__toggle-button">
               Block 3
               <span class="spm-icon spm-icon--chevron" aria-hidden></span>
             </button>
             <div class="spm__block__content">
+              <button
+                type="button"
+                class="spm__toggle-button"
+                data-action="close"
+              >
+                <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+                Close Block 3
+              </button>
               <ul class="spm__list">
                 <li class="spm__list__item">
                   <a href="">Lorem, ipsum dolor.</a>
@@ -145,11 +204,19 @@
             </div>
           </div>
           <div class="spm__block">
-            <button type="button" class="spm__block__title spm__toggle-button">
+            <button type="button" class="spm__toggle-button">
               Block 4
               <span class="spm-icon spm-icon--chevron" aria-hidden></span>
             </button>
             <div class="spm__block__content">
+              <button
+                type="button"
+                class="spm__toggle-button"
+                data-action="close"
+              >
+                <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+                Close Block 4
+              </button>
               <ul class="spm__list">
                 <li class="spm__list__item">
                   <a href="">Lorem, ipsum dolor.</a>
@@ -189,6 +256,7 @@
       <nav id="main-navigation">
         <a href="/demo/index.html">Classic menu</a>
         <a href="/demo/off-canvas.html">Off-canvas</a>
+        <a href="/demo/off-canvas-2.html">Off-canvas v2</a>
         <a href="/demo/modal.html">Modal menu</a>
         <a href="/demo/full-screen.html">Full screen menu</a>
         <a href="/demo/unstyled.html">Unstyled menu</a>
@@ -243,6 +311,11 @@
             value="#2457f2"
           />
           <label for="accent-color">Accent color</label>
+        </div>
+        <br />
+        <div>
+          <input type="range" id="width" name="width" min="300" max="600" />
+          <label for="width">Menu width</label>
         </div>
       </section>
     </main>

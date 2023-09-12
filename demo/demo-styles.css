@@ -83,7 +83,6 @@ body.darkmode .spm-logo {
 #main-navigation {
   display: flex;
   background: transparent;
-  margin: 16px auto;
   max-width: 800px;
   width: 95%;
   margin: 32px auto;
@@ -93,6 +92,19 @@ a {
   display: block;
   padding: 16px;
   color: rgb(50, 69, 240);
+}
+
+#main-navigation a {
+  font-size: 0.875rem;
+}
+
+#main-navigation a:hover {
+  text-decoration: none;
+}
+
+#main-navigation a.active {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Improve contrast on list item markers. */

@@ -196,7 +196,10 @@ export class SupaMenu {
         blockToggleButton.addEventListener("click", (event) => {
           event.stopPropagation();
 
-          if (!this.getElement()?.classList.contains("supamenu--off-canvas")) {
+          if (
+            !this.getElement()?.classList.contains("supamenu--off-canvas") &&
+            !this.getElement()?.classList.contains("supamenu--off-canvas-v2")
+          ) {
             const ariaControls =
               blockToggleButton.getAttribute("aria-controls");
 
@@ -224,6 +227,34 @@ export class SupaMenu {
           // Toggle the wished block
           b.toggle();
         });
+      }
+
+      // Close closest parent toggler
+      // off canvas-v2 usage
+      const blockHideButtons = block.querySelectorAll(
+        ".spm__toggle-button[data-action='close']"
+      );
+      if (blockHideButtons?.length > 0) {
+        blockHideButtons.forEach((bHb) =>
+          bHb.addEventListener("click", () => {
+            const parentMenuBlock = bHb.closest(".spm__block");
+
+            const parentToggler = this.togglers.find(
+              (t) => t.element === parentMenuBlock
+            );
+
+            if (parentToggler) {
+              parentToggler.hide();
+              const previousButton = parentToggler.element.querySelectorAll(
+                ".spm__toggle-button"
+              )[0];
+
+              if (previousButton) {
+                (previousButton as HTMLButtonElement).focus();
+              }
+            }
+          })
+        );
       }
     });
   };

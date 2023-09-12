@@ -52,7 +52,11 @@
     #fff 16%
   );
 
-  --supamenu-text-color: var(--supamenu-color-dark);
+  --supamenu-text-color: color-mix(
+    in srgb,
+    var(--supamenu-color-dark),
+    #fff 16%
+  );
 }
 
 .supamenu {
