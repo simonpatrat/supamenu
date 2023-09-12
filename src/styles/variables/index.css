@@ -167,10 +167,16 @@
       var(--supamenu-color-dark) 85%,
       #000
     );
+
     --supamenu-link-color-hover: color-mix(
       in srgb,
       var(--supamenu-accent-color),
       #fff 40%
+    );
+    --supamenu-link-color-active: color-mix(
+      in srgb,
+      var(--supamenu-accent-color),
+      #ffffff 20%
     );
 
     --supamenu-classic-menu-dropdown-background: var(--supamenu-color-dark-500);

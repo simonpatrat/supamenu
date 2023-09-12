@@ -41,7 +41,14 @@ const getPostCssPlugins = () => [
   postcssDiscardDuplicates(),
 ];
 
-const skinNames = ["unstyled", "modal", "classic", "off-canvas", "full-screen"];
+const skinNames = [
+  "unstyled",
+  "modal",
+  "classic",
+  "off-canvas",
+  "off-canvas-v2",
+  "full-screen",
+];
 
 const generateSkins = () =>
   skinNames.map((skinName) => {

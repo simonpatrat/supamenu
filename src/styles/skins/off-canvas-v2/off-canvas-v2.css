@@ -1,0 +1,44 @@
+.supamenu--off-canvas-v2 {
+  @add-mixin supamenu-base;
+
+  &[data-theme="dark"],
+  &.supamenu--darkmode,
+  &.darkmode {
+    --supamenu-toggle-button-background-color: var(--supamenu-color-dark-600);
+
+    --supamenu-border-color: color-mix(
+      in srgb,
+      var(--supamenu-off-canvas-background),
+      #fff 3%
+    );
+  }
+
+  @add-mixin off-canvas {
+    *.spm-component {
+      + * {
+        margin-top: 16px;
+      }
+    }
+
+    .spm__block {
+      + .spm__block {
+        margin-top: 8px;
+      }
+    }
+
+    background: var(--supamenu-off-canvas-background);
+
+    .spm__block__content {
+      background: var(--supamenu-off-canvas-background);
+    }
+  }
+}
+
+.supamenu-page {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+
+  &.supamenu-page--menu-visible {
+    transform: translateX(var(--supamenu-menu-width));
+  }
+}

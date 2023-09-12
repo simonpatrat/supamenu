@@ -11,104 +11,173 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./demo-styles.css" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../dist/css/supamenu-off-canvas.css"
-    />
+    <link type="text/css" rel="stylesheet" href="../dist/css/supamenu.css" />
   </head>
   <body>
-    <nav id="menu-1" class="supamenu supamenu--off-canvas">
-      <div class="spm-component">
-        <div class="spm-search">
-          <span
-            class="spm-icon spm-icon--m-glass spm-search__icon"
-            aria-hidden
-          ></span>
-          <input type="search" aria-label="search" placeholder="Search.." />
+    <nav id="menu-1" class="supamenu supamenu--off-canvas-v2">
+      <div class="spm-container">
+        <div class="spm-component">
+          <div class="spm-search">
+            <span
+              class="spm-icon spm-icon--m-glass spm-search__icon"
+              aria-hidden
+            ></span>
+            <input type="search" aria-label="search" placeholder="Search.." />
+          </div>
         </div>
-      </div>
 
-      <div class="spm__block">
-        <button type="button" class="spm__block__title spm__toggle-button">
-          Block 1 <span class="spm-icon spm-icon--triangle" aria-hidden></span>
-        </button>
-        <div class="spm__block__content">
-          <ul class="spm__list">
-            <li class="spm__list__item">
-              <a href="/demo/index.html">Classic menu</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="/demo/modal.html">Modal menu</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="/demo/off-canvas.html">Off-canvas menu</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="/demo/full-screen.html">Full screen menu</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="/demo/unstyled.html">Unstyled menu</a>
-            </li>
-            <li class="spm__list__item">
-              <div class="spm__block">
-                <button
-                  type="button"
-                  class="spm__block__title spm__toggle-button"
-                >
-                  Block 1-1
-                  <span class="spm-icon spm-icon--triangle" aria-hidden></span>
-                </button>
-                <div class="spm__block__content">
-                  <ul class="spm__list t-visible">
-                    <li class="spm__list__item">
-                      <a href="">Lorem ipsum dolor sit.</a>
-                    </li>
-                    <li class="spm__list__item">
-                      <a href="">Lorem, ipsum dolor.</a>
-                    </li>
-                    <li class="spm__list__item">
-                      <a href="">Lorem ipsum dolor sit amet consectetur.</a>
-                    </li>
-                    <li class="spm__list__item">
-                      <a href="">Lorem, ipsum.</a>
-                    </li>
-                    <li class="spm__list__item">
-                      <a href=""
-                        >Lorem ipsum dolor sit amet consectetur adipisicing.</a
-                      >
-                    </li>
-                    <li class="spm__list__item">
-                      <a href="">Lorem ipsum dolor sit.</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
+        <div class="spm__group">
+          <div class="spm__block">
+            <button type="button" class="spm__block__title spm__toggle-button">
+              Block 1
+              <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+            </button>
+            <div class="spm__block__content">
+              <ul class="spm__list">
+                <li class="spm__list__item">
+                  <a href="/demo/index.html">Classic menu</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/modal.html">Modal menu</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/off-canvas.html">Off-canvas menu</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/full-screen.html">Full screen menu</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/unstyled.html">Unstyled menu</a>
+                </li>
+                <li class="spm__list__item">
+                  <div class="spm__block">
+                    <button
+                      type="button"
+                      class="spm__block__title spm__toggle-button"
+                    >
+                      Block 1-1
+                      <span
+                        class="spm-icon spm-icon--chevron"
+                        aria-hidden
+                      ></span>
+                    </button>
+                    <div class="spm__block__content">
+                      <ul class="spm__list t-visible">
+                        <li class="spm__list__item">
+                          <a href="">Lorem ipsum dolor sit.</a>
+                        </li>
+                        <li class="spm__list__item">
+                          <a href="">Lorem, ipsum dolor.</a>
+                        </li>
+                        <li class="spm__list__item">
+                          <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+                        </li>
+                        <li class="spm__list__item">
+                          <a href="">Lorem, ipsum.</a>
+                        </li>
+                        <li class="spm__list__item">
+                          <a href=""
+                            >Lorem ipsum dolor sit amet consectetur
+                            adipisicing.</a
+                          >
+                        </li>
+                        <li class="spm__list__item">
+                          <a href="">Lorem ipsum dolor sit.</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="spm__block">
+            <button type="button" class="spm__block__title spm__toggle-button">
+              Block 2
+              <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+            </button>
+            <div class="spm__block__content">
+              <ul class="spm__list">
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+                </li>
+                <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
+                <li class="spm__list__item">
+                  <a href=""
+                    >Lorem ipsum dolor sit amet consectetur adipisicing.</a
+                  >
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/off-canvas-2.html">Other page</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem ipsum dolor sit.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="spm__block">
-        <button type="button" class="spm__block__title spm__toggle-button">
-          Block 2 <span class="spm-icon spm-icon--triangle" aria-hidden></span>
-        </button>
-        <div class="spm__block__content">
-          <ul class="spm__list">
-            <li class="spm__list__item"><a href="">Lorem, ipsum dolor.</a></li>
-            <li class="spm__list__item">
-              <a href="">Lorem ipsum dolor sit amet consectetur.</a>
-            </li>
-            <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
-            <li class="spm__list__item">
-              <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="/demo/off-canvas-2.html">Other page</a>
-            </li>
-            <li class="spm__list__item">
-              <a href="">Lorem ipsum dolor sit.</a>
-            </li>
-          </ul>
+
+        <div class="spm__group spm__group--bottom">
+          <div class="spm__block">
+            <button type="button" class="spm__block__title spm__toggle-button">
+              Block 3
+              <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+            </button>
+            <div class="spm__block__content">
+              <ul class="spm__list">
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="spm__block">
+            <button type="button" class="spm__block__title spm__toggle-button">
+              Block 4
+              <span class="spm-icon spm-icon--chevron" aria-hidden></span>
+            </button>
+            <div class="spm__block__content">
+              <ul class="spm__list">
+                <li class="spm__list__item">
+                  <a href="">Lorem, ipsum dolor.</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem ipsum dolor sit amet consectetur.</a>
+                </li>
+                <li class="spm__list__item"><a href="">Lorem, ipsum.</a></li>
+                <li class="spm__list__item">
+                  <a href=""
+                    >Lorem ipsum dolor sit amet consectetur adipisicing.</a
+                  >
+                </li>
+                <li class="spm__list__item">
+                  <a href="/demo/off-canvas-2.html">Other page</a>
+                </li>
+                <li class="spm__list__item">
+                  <a href="">Lorem ipsum dolor sit.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="spm-footer">
+          <div class="spm-component">
+            Powered by
+            <div class="spm-logo">supamenu</div>
+          </div>
         </div>
       </div>
     </nav>

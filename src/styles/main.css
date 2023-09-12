@@ -5,6 +5,7 @@
 @import "./base/supamenu.css";
 @import "./buttons/index.css";
 @import "./skins/off-canvas/off-canvas.css";
+@import "./skins/off-canvas-v2/off-canvas-v2.css";
 @import "./skins/classic/classic.css";
 @import "./skins/modal/modal.css";
 @import "./skins/full-screen/full-screen.css";
