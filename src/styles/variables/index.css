@@ -55,7 +55,7 @@
   --supamenu-text-color: color-mix(
     in srgb,
     var(--supamenu-color-dark),
-    #fff 16%
+    #fff 8%
   );
 }
 

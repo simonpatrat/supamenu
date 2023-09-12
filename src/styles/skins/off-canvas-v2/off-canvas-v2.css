@@ -27,6 +27,38 @@
           margin: 0 auto;
           min-height: 40px;
           transition: none;
+
+          &:before {
+            width: 4px;
+            flex-basis: 4px;
+            min-width: 4px;
+            height: 2px;
+          }
+
+          &:hover,
+          &:focus {
+            background: linear-gradient(
+              130deg,
+              var(--supamenu-off-canvas-link-background-hover) 0%,
+              color-mix(
+                  in srgb,
+                  var(--supamenu-accent-color),
+                  var(--supamenu-background) 90%
+                )
+                100%
+            );
+
+            &:before {
+              transform: translateX(2px);
+              background: var(--supamenu-link-color-hover);
+            }
+          }
+
+          &.active {
+            &:before {
+              transform: none;
+            }
+          }
         }
       }
     }
@@ -41,7 +73,7 @@
       position: static;
 
       + .spm__block {
-        margin-top: 1px;
+        margin-top: 0px;
       }
 
       .spm__toggle-button {
