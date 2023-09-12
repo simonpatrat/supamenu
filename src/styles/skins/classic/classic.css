@@ -268,7 +268,9 @@
           overflow-y: auto;
           margin: 0 auto;
           left: 50%;
-          margin-left: calc((var(--supamenu-mega-menu-dropdown-width) / 2) * -1);
+          margin-left: calc(
+            (var(--supamenu-mega-menu-dropdown-width) / 2) * -1
+          );
         }
 
         .spm__mega__panel__content {
@@ -330,7 +332,7 @@
 
           &:hover,
           &:focus,
-            &.spm__block--visible {
+          &.spm__block--visible {
             .spm__block__content {
               transform: translateY(0);
             }
