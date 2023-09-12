@@ -5,10 +5,16 @@
   &.supamenu--darkmode,
   &.darkmode {
     --supamenu-toggle-button-background-color: var(--supamenu-color-dark-600);
+
+    --supamenu-border-color: color-mix(
+      in srgb,
+      var(--supamenu-off-canvas-background),
+      #fff 3%
+    );
   }
 
   @add-mixin off-canvas {
-    .spm-component {
+    *.spm-component {
       + * {
         margin-top: 16px;
       }

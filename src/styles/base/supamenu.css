@@ -148,14 +148,6 @@
     flex: 0 0 calc(100% - 32px);
     margin: auto;
 
-    > :first-child {
-      padding-left: 0;
-    }
-
-    > :last-child {
-      padding-right: 0;
-    }
-
     &.spm-grid {
       display: grid;
 
@@ -247,6 +239,15 @@
 
   .spm-search__icon {
     margin: 0 8px 0 16px;
+  }
+
+  .spm-footer {
+    margin-bottom: 0;
+    position: sticky;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    background: var(--supamenu-background);
   }
 
   &[data-theme="dark"],

@@ -357,9 +357,12 @@ export class SupaMenu {
       closeButton.addEventListener("click", this.hide);
     });
 
+    this.HTMLElement?.addEventListener("click", this.handleClickOnMenuBlock);
+
     if (this.settings.autoDetectColorScheme) {
       this.addListenerForColorScheme();
     }
+
     const togglerBlocks = this.togglers.map((t) => t.element);
     if (togglerBlocks?.length > 0) {
       togglerBlocks.forEach((block) => {
@@ -379,6 +382,8 @@ export class SupaMenu {
     document.querySelectorAll(CLOSE_MENU_SELECTOR).forEach((closeButton) => {
       closeButton.removeEventListener("click", this.hide);
     });
+
+    this.HTMLElement?.removeEventListener("click", this.handleClickOnMenuBlock);
 
     if (this.settings.autoDetectColorScheme) {
       this.removeListenerForColorScheme();

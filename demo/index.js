@@ -75,6 +75,9 @@ const preselectThemeFromUserPreferences = () => {
 preselectThemeFromUserPreferences();
 
 classesSelectors.forEach((classesSelector) => {
+  classesSelector.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
   classesSelector.addEventListener("change", (event) => {
     const formValues = [...event.currentTarget.elements].map((el) => ({
       value: el.value,
@@ -125,6 +128,10 @@ classesSelectors.forEach((classesSelector) => {
 const colorSelector = document.querySelector("#accent-color");
 
 if (colorSelector) {
+  colorSelector.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
   colorSelector.addEventListener("change", (event) => {
     const { value } = event.target;
 

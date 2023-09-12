@@ -9,6 +9,16 @@
     --supamenu-toggle-button-background-color: transparent;
   }
 
+  .spm-container {
+    > :first-child {
+      padding-left: 0;
+    }
+
+    > :last-child {
+      padding-right: 0;
+    }
+  }
+
   .spm__block {
     ul li {
       &:hover {

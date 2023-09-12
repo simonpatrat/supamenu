@@ -153,7 +153,7 @@
       var(--supamenu-background),
       #000 11%
     );
-    --supamenu-off-canvas-background: var(--supamenu-color-dark-900);
+    --supamenu-off-canvas-background: var(--supamenu-color-dark-800);
     --supamenu-text-color: color-mix(
       in srgb,
       var(--supamenu-accent-color) 8%,
