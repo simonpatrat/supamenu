@@ -84,7 +84,11 @@
     }
 
     .spm-container {
-      display: block;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      height: 100%;
+      width: 100%;
     }
 
     &.supamenu--visible {
@@ -93,6 +97,22 @@
 
       > {
         opacity: 1;
+      }
+    }
+
+    .spm__group {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding-bottom: 16px;
+
+      + .spm__group {
+        padding-top: 16px;
+        border-top: 1px solid var(--supamenu-border-color);
+      }
+
+      &.spm__group--bottom {
+        margin-top: auto;
       }
     }
 
