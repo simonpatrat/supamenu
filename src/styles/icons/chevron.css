@@ -1,0 +1,26 @@
+.spm-icon {
+  &.spm-icon--chevron {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    color: inherit;
+
+    &:before {
+      display: inline-block;
+      content: "\2304";
+      width: 12px;
+      height: 12px;
+      line-height: 12px;
+      vertical-align: middle;
+      margin-top: -6px;
+      color: inherit;
+    }
+  }
+}

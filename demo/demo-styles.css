@@ -7,10 +7,12 @@
 body {
   padding: 0;
   margin: 0;
-  background: var(
-    --dot-color-bg-lighter,
-    color-mix(in srgb, var(--supamenu-accent-color), #fff 60%)
+  background: linear-gradient(
+    137deg,
+    color-mix(in srgb, var(--supamenu-accent-color) 30%, #fff) 0%,
+    color-mix(in srgb, var(--supamenu-accent-color) 70%, #fff) 60%
   );
+
   color: var(--dot-color-text-dark, #121212);
   font-family: "Public Sans", sans-serif, "Franklin Gothic Medium",
     "Arial Narrow", Arial, sans-serif;

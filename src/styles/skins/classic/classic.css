@@ -235,7 +235,8 @@
                   border-bottom: 1px solid var(--supamenu-border-color);
                   background: var(--supamenu-background);
 
-                  .spm-icon.spm-icon--triangle {
+                  .spm-icon.spm-icon--triangle,
+                  .spm-icon.spm-icon--chevron {
                     transform: rotate(-90deg);
                   }
                 }
