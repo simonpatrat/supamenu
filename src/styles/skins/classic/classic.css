@@ -1,3 +1,4 @@
+.supamenu.supamenu--classic,
 .supamenu--classic {
   @add-mixin supamenu-base;
 

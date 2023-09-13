@@ -1,3 +1,4 @@
+.supamenu.supamenu--modal,
 .supamenu--modal {
   @add-mixin supamenu-base;
 

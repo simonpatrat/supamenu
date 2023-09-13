@@ -1,3 +1,4 @@
+.supamenu.supamenu--off-canvas,
 .supamenu--off-canvas {
   @add-mixin supamenu-base;
 
