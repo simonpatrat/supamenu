@@ -13,6 +13,7 @@
   @add-mixin scrollbar-styles;
 
   * {
+    box-sizing: border-box;
     @add-mixin scrollbar-styles;
   }
 
