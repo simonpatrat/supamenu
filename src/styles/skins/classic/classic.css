@@ -378,6 +378,7 @@
 }
 
 @media (max-width: 1024px) {
+  .supamenu.supamenu--classic,
   .supamenu--classic {
     .spm-inner-container {
       display: block;
@@ -404,16 +405,18 @@
         display: block;
       }
 
-      .spm__block__title {
+      .spm__block__title,
+      p.spm__block__title {
         padding-left: 8px;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
       }
 
       .spm__toggle-button,
       button.spm__toggle-button {
         justify-self: flex-end;
+        justify-content: center;
         margin-left: auto;
         width: 40px;
         height: 40px;
