@@ -133,6 +133,11 @@
       background: var(--supamenu-off-canvas-background);
     }
 
+    .spm-component {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
     .spm__group {
       display: flex;
       flex-direction: column;

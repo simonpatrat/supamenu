@@ -15,7 +15,7 @@
   }
 
   @add-mixin off-canvas {
-    *.spm-component {
+    .spm-component {
       + * {
         margin-top: 16px;
       }
