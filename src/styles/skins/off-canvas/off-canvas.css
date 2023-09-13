@@ -21,6 +21,10 @@
       }
     }
 
+    .spm__group {
+      padding: 16px;
+    }
+
     .spm__block {
       + .spm__block {
         margin-top: 8px;
