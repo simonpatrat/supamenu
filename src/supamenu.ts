@@ -175,10 +175,34 @@ export class SupaMenu {
   };
 
   onShowSubmenu = (togglerElement?: HTMLElement) => {
+    const menuElement = this.getElement();
     if (togglerElement) {
       togglerElement
         .querySelector(".spm__toggle-button")
         ?.setAttribute("aria-expanded", "true");
+
+      if (
+        menuElement &&
+        (menuElement?.classList.contains("supamenu--off-canvas") ||
+          menuElement?.classList.contains("supamenu--full-screen"))
+      ) {
+        const elScrollPos = togglerElement?.offsetTop;
+
+        setTimeout(() => {
+          menuElement.scrollTo({
+            top: elScrollPos,
+            left: 0,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
+    }
+
+    if (
+      menuElement &&
+      menuElement?.classList.contains("supamenu--off-canvas-v2")
+    ) {
+      menuElement.scrollTop = 0;
     }
   };
 

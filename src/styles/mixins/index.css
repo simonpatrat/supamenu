@@ -62,7 +62,7 @@
 
 @define-mixin off-canvas {
   @add-mixin sidebar-styles {
-    padding: 16px 0 0 0;
+    padding: 0;
 
     --supamenu-toggle-button-background-color: color-mix(
       in srgb,
@@ -82,8 +82,8 @@
       --supamenu-menu-group-border-color: var(--supamenu-border-color);
     }
 
-    > {
-      opacity: 0;
+    .spm-container > :first-child {
+      margin-top: 16px;
     }
 
     .spm__close-menu-button {
@@ -277,7 +277,7 @@
     .spm__block.spm__block--visible {
       > .spm__block__content {
         height: auto;
-        max-height: 1000px;
+        max-height: 2000px;
         transition: all 300ms ease-in;
 
         > * {

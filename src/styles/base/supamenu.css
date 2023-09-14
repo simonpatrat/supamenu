@@ -249,7 +249,7 @@
     top: auto;
     left: 0;
     background: var(--supamenu-background);
-    z-index: calc(var(--supamenu-z-index) + 10);
+    // z-index: calc(var(--supamenu-z-index) + 10);
     padding: 16px;
   }
 
